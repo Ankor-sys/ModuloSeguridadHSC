@@ -99,7 +99,7 @@
             this.MaximizeBox = false;
             this.Name = "frmCambioContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMantenimientoPerfil";
+            this.Text = "0010 Cambiar Contraseña";
             this.ResumeLayout(false);
             this.PerformLayout();
 

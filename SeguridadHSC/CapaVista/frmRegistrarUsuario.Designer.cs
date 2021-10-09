@@ -161,7 +161,7 @@ namespace CapaVistaSeguridadHSC
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistrarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRegistrarUsuario";
+            this.Text = "0002 Registrar Usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 

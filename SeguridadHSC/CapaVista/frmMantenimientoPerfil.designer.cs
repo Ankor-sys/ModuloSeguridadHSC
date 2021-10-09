@@ -198,7 +198,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMantenimientoPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mantenimiento Perfil";
+            this.Text = "0004 Mantenimiento Perfil";
             this.Load += new System.EventHandler(this.frmMantenimientoPerfil_Load);
             this.gbxEstado.ResumeLayout(false);
             this.gbxEstado.PerformLayout();

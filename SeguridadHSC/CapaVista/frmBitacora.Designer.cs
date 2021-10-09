@@ -29,11 +29,7 @@ namespace CapaVistaSeguridadHSC
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvBitacora1 = new VistaBitacora.DGVBitacora();
             this.pkIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,8 +41,6 @@ namespace CapaVistaSeguridadHSC
             this.conexionHoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnActualizarBitacora = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBitacora1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,48 +48,10 @@ namespace CapaVistaSeguridadHSC
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dgvBitacora1);
             this.panel1.Location = new System.Drawing.Point(12, 62);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(821, 353);
             this.panel1.TabIndex = 0;
-            // 
-            // dgvBitacora1
-            // 
-            this.dgvBitacora1.AutoGenerateColumns = false;
-            this.dgvBitacora1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvBitacora1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvBitacora1.BackgroundColor = System.Drawing.Color.Wheat;
-            this.dgvBitacora1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvBitacora1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBitacora1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvBitacora1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBitacora1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.pkIdDataGridViewTextBoxColumn,
-            this.usuarioDataGridViewTextBoxColumn,
-            this.hostDataGridViewTextBoxColumn,
-            this.ipDataGridViewTextBoxColumn,
-            this.moduloDataGridViewTextBoxColumn,
-            this.aplicacionDataGridViewTextBoxColumn,
-            this.accionDataGridViewTextBoxColumn,
-            this.conexionFechaDataGridViewTextBoxColumn,
-            this.conexionHoraDataGridViewTextBoxColumn});
-            this.dgvBitacora1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvBitacora1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBitacora1.Location = new System.Drawing.Point(0, 0);
-            this.dgvBitacora1.MultiSelect = false;
-            this.dgvBitacora1.Name = "dgvBitacora1";
-            this.dgvBitacora1.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBitacora1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvBitacora1.RowHeadersVisible = false;
-            this.dgvBitacora1.Size = new System.Drawing.Size(821, 353);
-            this.dgvBitacora1.TabIndex = 0;
             // 
             // pkIdDataGridViewTextBoxColumn
             // 
@@ -197,9 +153,7 @@ namespace CapaVistaSeguridadHSC
             this.Controls.Add(this.panel1);
             this.Name = "frmBitacora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBitacora";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBitacora1)).EndInit();
+            this.Text = "0011 Bitacora";
             this.ResumeLayout(false);
             this.PerformLayout();
 

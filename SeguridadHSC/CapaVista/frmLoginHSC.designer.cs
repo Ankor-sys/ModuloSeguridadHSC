@@ -239,7 +239,7 @@ namespace CapaVistaSeguridadHSC
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmLoginHSC";
-            this.Text = "frmLoginHSC";
+            this.Text = "0001 LoginHSC";
             this.Load += new System.EventHandler(this.frmLoginHSC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -16,15 +16,13 @@ namespace CapaVistaSeguridadHSC
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            
             frmLoginHSC form = new frmLoginHSC();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 txtUsuario.Text = form.usuario();
             }
-            /*this.Hide();
-            var form2 = new frmLoginHSC();
-            form2.Closed += (s, args) => this.Hide();
-            form2.Show();*/
+            else { this.Close(); }
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
