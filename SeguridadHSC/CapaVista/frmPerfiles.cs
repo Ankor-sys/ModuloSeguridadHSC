@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using CapaControladorSeguridadHSC;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaControlador;
 
-namespace CapaVista
+namespace CapaVistaSeguridadHSC
 {
     public partial class frmPerfiles : Form
     {
@@ -139,18 +134,18 @@ namespace CapaVista
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             //Llenar con Enter
-        
-                if (e.KeyCode == Keys.Enter)
-                {
+
+            if (e.KeyCode == Keys.Enter)
+            {
                 e.Handled = true;//elimina el sonido
                 PerfilllenarNombre();//llama al evento click del boton
                 actualizardatagriewpersonal();
                 actualizardatagriew();
                 textBox2.Focus();
-            }            
+            }
         }
 
-        
+
         private void button6_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -197,7 +192,7 @@ namespace CapaVista
                 button5.Focus();//Mueve al siguiente boton
             }
         }
-        
+
         private void button5_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Down)

@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using CapaControladorSeguridadHSC;
+using System;
 using System.Data;
 using System.Data.Odbc;
+<<<<<<< HEAD
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+=======
+>>>>>>> 8e0b27e426444fcbe90940e4c0cbe1da482bf008
 using System.Windows.Forms;
-using CapaControlador;
 
 
 
-namespace CapaVista
+namespace CapaVistaSeguridadHSC
 {
     public partial class frmMantenimientoAplicacion : Form
     {
@@ -20,13 +21,17 @@ namespace CapaVista
         public frmMantenimientoAplicacion()
         {
             InitializeComponent();
+<<<<<<< HEAD
            CenterToScreen();
+=======
+            CenterToScreen();
+>>>>>>> 8e0b27e426444fcbe90940e4c0cbe1da482bf008
             actualizardatagriew();
             llenarcbxAplicacion();
 
         }
 
-        
+
 
         public void funLimpiar()
         {
@@ -35,7 +40,7 @@ namespace CapaVista
             btnHabilitado.Checked = false;
             btnInhabilitado.Checked = false;
             textBox3.Text = "";
-            
+
         }
 
 
@@ -50,10 +55,17 @@ namespace CapaVista
             textBox3.Text = "0";
         }
 
+<<<<<<< HEAD
        
      
         
         
+=======
+
+
+
+
+>>>>>>> 8e0b27e426444fcbe90940e4c0cbe1da482bf008
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
@@ -63,7 +75,7 @@ namespace CapaVista
         {
             try
             {
-                
+
                 conAplicacion.insertarAplicacion(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), " ");
                 MessageBox.Show("Insercion realizada");
                 funLimpiar();
@@ -186,9 +198,15 @@ namespace CapaVista
 
         }
 
+<<<<<<< HEAD
        
 
         
+=======
+
+
+
+>>>>>>> 8e0b27e426444fcbe90940e4c0cbe1da482bf008
     }
 
 

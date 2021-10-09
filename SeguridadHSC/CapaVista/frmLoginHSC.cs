@@ -1,23 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BitacoraUsuario;
+using CapaControladorSeguridadHSC;
+using System;
 using System.Windows.Forms;
-using CapaControlador;
-using System.Windows.Input;
-using System.Windows;
-using BitacoraUsuario;
 using static datosUsuario;
 
-namespace CapaVista
+namespace CapaVistaSeguridadHSC
 {
     public partial class frmLoginHSC : Form
     {
+
         private Controlador conAplicacion = new Controlador();
+
 
         public frmLoginHSC()
         {
@@ -65,16 +58,21 @@ namespace CapaVista
                     // Bitácora
                    /* Bitacora loggear = new Bitacora();
                     IdUsuario = loggear.obtenerIdDeUsuario(Usuario);
+<<<<<<< HEAD
                     loggear.guardarEnBitacora(IdUsuario, "1", "1", "Login");*/
 
+=======
+                    loggear.guardarEnBitacora(IdUsuario, "1", "1", "Login");
+                    DialogResult = DialogResult.OK;
+>>>>>>> 8e0b27e426444fcbe90940e4c0cbe1da482bf008
                     // Fin bitácora
 
                     MessageBox.Show(" Bienvenido " + txtUsuario.Text);
-                    funLimpiar();
+                  /*  funLimpiar();
                     this.Hide();
                     var form2 = new frmMIDSeguridad();
                     form2.Closed += (s, args) => this.Close();
-                    form2.Show();
+                    form2.Show();*/
                 }
                 else
                 {
@@ -122,7 +120,10 @@ namespace CapaVista
                 MessageBox.Show("Debe ingresar su usuario ");
             }*/
         }
-
+        public string usuario()
+        {
+            return txtUsuario.Text;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
         }

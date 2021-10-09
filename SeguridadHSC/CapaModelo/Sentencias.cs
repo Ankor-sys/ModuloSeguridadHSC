@@ -1,23 +1,19 @@
 using System;
-using System.Collections.Generic;
 using System.Data.Odbc;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 
 
 
 
-namespace CapaModelo
+namespace CapaModeloSeguridadHSC
 {
     public class Sentencias
     {
         private Conexion cn = new Conexion();
         private OdbcCommand Comm;
 
-        //frmLogin
+        //frmLogin Kevin Flores 
         public int funIniciarSesion(string Usuario, string Contraseña, int validar)
         {
             try
@@ -74,7 +70,7 @@ namespace CapaModelo
             }
         }
 
-        //frmMantenimientoAplicacion
+        //frmMantenimientoAplicacion Sebastián Moreira 
         public void funInsertar(string Id, string Nombre, int estado, string ruta)
         {
             string cadena = "INSERT INTO" +
@@ -129,8 +125,12 @@ namespace CapaModelo
         }
 
 
+<<<<<<< HEAD
 
         //frmPerfiles
+=======
+        //frmPerfiles Heydi Quemé
+>>>>>>> 8e0b27e426444fcbe90940e4c0cbe1da482bf008
 
         public OdbcDataAdapter PerfilllenarTbl(string tabla2)// metodo  que obtinene el contenido de una tabla
         {
@@ -189,7 +189,7 @@ namespace CapaModelo
             consulta2.ExecuteNonQuery();
         }
 
-        //frmAplicaciones
+        //frmAplicaciones Danny Saldaña
         public OdbcDataAdapter aplicacionllenarTbl(string tabla2)// metodo  que obtinene el contenido de una tabla
         {
             //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
@@ -208,13 +208,13 @@ namespace CapaModelo
 
         public OdbcDataAdapter aplicacionllenarTblPersonal(string tabla3, string condicion)// metodo  que obtinene el contenido de una tabla
         {
-            
-                //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
-                string sql = "SELECT aplicacion.pkid, aplicacion.nombre FROM " + tabla3 + "  LEFT JOIN usuarioaplicacion ON aplicacion.pkid = usuarioaplicacion.fkidAplicacion LEFT JOIN usuario ON usuarioaplicacion.fkIdUsuario = usuario.pkid WHERE usuario.pkid = " + condicion + " ORDER BY aplicacion.pkid;";
-                OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
-                return dataTable;
-          
-            
+
+            //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
+            string sql = "SELECT aplicacion.pkid, aplicacion.nombre FROM " + tabla3 + "  LEFT JOIN usuarioaplicacion ON aplicacion.pkid = usuarioaplicacion.fkidAplicacion LEFT JOIN usuario ON usuarioaplicacion.fkIdUsuario = usuario.pkid WHERE usuario.pkid = " + condicion + " ORDER BY aplicacion.pkid;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+
+
         }
 
         public OdbcDataAdapter aplicacionllenarNombre(string tabla, string condicion)// metodo  que obtinene el contenido
@@ -227,7 +227,7 @@ namespace CapaModelo
 
         public void aplicacionagregar(string tabla3, string valor1, string valor2)
         {
-            string sql = "INSERT INTO " + tabla3 + "  Values('" +valor1+ "','" + valor2 + "',null,null,null,null,null);";
+            string sql = "INSERT INTO " + tabla3 + "  Values('" + valor1 + "','" + valor2 + "',null,null,null,null,null);";
             OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
             consulta.ExecuteNonQuery();
         }
@@ -256,8 +256,27 @@ namespace CapaModelo
             OdbcCommand consulta2 = new OdbcCommand(sql2, cn.conexion());
             consulta2.ExecuteNonQuery();
         }
+        //frmAplicaciones Danny Saldaña
 
-        //frmRecuperarContraseña
+        public OdbcDataAdapter aplicacionllenarTblPersonal(string tabla2)// metodo  que obtinene el contenido de una tabla
+        {
+            //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
+            string sql = "SELECT aplicacion.pkid, aplicacion.nombre, perfil.pkid, perfil.nombre FROM aplicacionperfil  LEFT JOIN aplicacion ON aplicacion.pkid = aplicacionperfil.fkidAplicacion LEFT JOIN perfil ON aplicacionperfil.fkidPerfil = perfil.pkid ORDER BY aplicacion.pkid;";
+            OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, cn.conexion());
+            return dataTable;
+        }
+
+
+        public void aplicacioneliminartodo(string tabla3)
+        {
+            string sql = "DELETE FROM aplicacionperfil;";
+            OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
+            consulta.ExecuteNonQuery();
+        }
+
+
+
+        //frmRecuperarContraseña Heydi Quemé
         public OdbcDataReader funcModificarContraseña(string Consulta)
         {
             try
@@ -304,7 +323,7 @@ namespace CapaModelo
             }
         }
 
-        //mantenimiento Perfil
+        //mantenimiento Perfil Luis de la Cruz
 
         public void funInsertar(string Id, string Nombre, int estado)
         {
@@ -359,7 +378,7 @@ namespace CapaModelo
             return dataTable;
         }
 
-        //Aplicacion a perfiles
+        //Aplicacion a perfiles Roberto López
         public OdbcDataAdapter llenarTblappaperf(string tabla2)// metodo  que obtinene el contenido de una tabla
         {
             //string para almacenar los campos de OBTENERCAMPOS y utilizar el 1ro
@@ -416,7 +435,7 @@ namespace CapaModelo
             consulta2.ExecuteNonQuery();
         }
 
-        //Cambiar contraseña
+        //Cambiar contraseña Roberto López
 
         public OdbcDataReader funcModificar(string Consulta)
         {
@@ -441,7 +460,9 @@ namespace CapaModelo
                 OdbcCommand consulta = new OdbcCommand(sql, cn.conexion());
                 consulta.ExecuteNonQuery();
             }
+#pragma warning disable CS0168 // La variable 'e' se ha declarado pero nunca se usa
             catch (Exception e)
+#pragma warning restore CS0168 // La variable 'e' se ha declarado pero nunca se usa
             {
                 Console.WriteLine("Ya existe un usuario con ese id de empleado");
             }

@@ -1,4 +1,4 @@
-﻿namespace CapaVista
+﻿namespace CapaVistaSeguridadHSC
 {
     partial class frmMantenimientoAplicacion
     {
@@ -273,7 +273,11 @@
             this.AcceptButton = this.btnInsertar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackgroundImage = global::CapaVista.Properties.Resources._90_Simple_Backgrounds_Edit_and_Download_Visual_Learning_Center;
+=======
+            this.BackgroundImage = global::CapaVistaSeguridadHSC.Properties.Resources._90_Simple_Backgrounds_Edit_and_Download_Visual_Learning_Center;
+>>>>>>> 8e0b27e426444fcbe90940e4c0cbe1da482bf008
             this.ClientSize = new System.Drawing.Size(658, 537);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label3);
@@ -299,7 +303,11 @@
             this.MaximizeBox = false;
             this.Name = "frmMantenimientoAplicacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+<<<<<<< HEAD
             this.Text = "frmMantenimientoAplicacion";
+=======
+            this.Text = "0003 Mantenimiento Aplicacion";
+>>>>>>> 8e0b27e426444fcbe90940e4c0cbe1da482bf008
             this.gbxEstado.ResumeLayout(false);
             this.gbxEstado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

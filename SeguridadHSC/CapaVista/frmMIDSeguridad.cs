@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaControladorSeguridadHSC;
 
-namespace CapaVista
+namespace CapaVistaSeguridadHSC
 {
     public partial class frmMIDSeguridad : Form
     {
+        ObtenerPermisos global = new ObtenerPermisos();
         public frmMIDSeguridad()
         {
             InitializeComponent();
@@ -21,10 +16,13 @@ namespace CapaVista
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var form2 = new frmLoginHSC();
-            form2.Closed += (s, args) => this.Hide();
-            form2.Show();
+            
+            frmLoginHSC form = new frmLoginHSC();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                txtUsuario.Text = form.usuario();
+            }
+            else { this.Close(); }
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -65,7 +63,7 @@ namespace CapaVista
 
         private void btnAsignacionDeAplicacionesAPerfiles_Click(object sender, EventArgs e)
         {
-            frmAplicacionAPerfiles form3 = new frmAplicacionAPerfiles();
+            frmAplicacionesPerfiles form3 = new frmAplicacionesPerfiles();
             form3.MdiParent = this;
 
             form3.Show();
@@ -113,6 +111,25 @@ namespace CapaVista
             form3.MdiParent = this;
 
             form3.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void frmLoginHSC_Load(object sender, EventArgs e)
+        {
+            frmLoginHSC form = new frmLoginHSC();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                txtUsuario.Text = form.usuario();
+                global.usuarioglobal = txtUsuario.Text;
+            }
+            else
+            {
+                this.Close();
+            }
+
         }
     }
 }
