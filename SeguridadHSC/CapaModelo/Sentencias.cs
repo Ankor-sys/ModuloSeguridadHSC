@@ -125,12 +125,10 @@ namespace CapaModeloSeguridadHSC
         }
 
 
-<<<<<<< HEAD
+
 
         //frmPerfiles
-=======
-        //frmPerfiles Heydi Quemé
->>>>>>> 8e0b27e426444fcbe90940e4c0cbe1da482bf008
+
 
         public OdbcDataAdapter PerfilllenarTbl(string tabla2)// metodo  que obtinene el contenido de una tabla
         {
